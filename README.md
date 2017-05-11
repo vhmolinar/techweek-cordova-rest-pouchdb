@@ -14,7 +14,6 @@ Neste caso pode-se substituir ``$(pwd)`` por outro diretório qualquer que se de
 ### Configurando o CouchDB:
 
   - Acesse: http://localhost:5984/_utils para verificar que a instalação foi bem sucedida.
-  - Navegue até a opção ``Setup`` para configurar uma instância Single Node.
   - Navegue até a opção ``Configure > Cors > Enable Cors``
 
 ## Preparar ambiente
@@ -27,6 +26,10 @@ $ npm install
 ```
 
 ## Rodar teste
+Basta servir estaticamente os arquivos na raíz.
 ```sh
-
+$ npm install -g static-server
+$ static-server
 ```
+Acessar o navegador no endereço informado. Ex:
+``http://localhost:9080``
