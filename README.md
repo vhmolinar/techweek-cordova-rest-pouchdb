@@ -38,3 +38,6 @@ Abrir /app1.html e /app2.html
 
 ## Dúvidas
 vhmolinar@gmailcom
+
+## Slides
+http://slides.com/victorhugomolinar/deck
