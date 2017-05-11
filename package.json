@@ -1,0 +1,24 @@
+{
+  "name": "techweek-cordova-rest-pouchdb",
+  "version": "1.0.0",
+  "description": "Techweek 2017: Cordova, Rest e PouchDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vhmolinar/techweek-cordova-rest-pouchdb.git"
+  },
+  "keywords": [
+    "cordova",
+    "rest",
+    "pouchdb"
+  ],
+  "author": "Victor Hugo Molinar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vhmolinar/techweek-cordova-rest-pouchdb/issues"
+  },
+  "homepage": "https://github.com/vhmolinar/techweek-cordova-rest-pouchdb#readme"
+}
