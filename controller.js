@@ -14,10 +14,10 @@
       retry: true
     }).on('change', function (info) {
       if(info.direction == 'push') {
-        debugger;
         info.change.docs.forEach(function(doc) {
           if(!duplicated(doc._id)){
             $timeout(function() {
+              doc.remote = true;
               pushLocal(doc);
             });
           }
@@ -35,10 +35,17 @@
       pushLocal(obj);
 
       db.put(obj).then(function () {
+        console.log('ok then');
       }).catch(function (err) {
         console.error(err);
       });
     };
+
+    vm.style = function(remote) {
+      return {
+        'text-align': remote ? 'left' : 'right'
+      };
+    }
 
     var pushLocal = function(obj) {
       localMsg[obj._id] = true;
@@ -49,7 +56,7 @@
       return localMsg[id];
     }
 
-    function msgId(){
+    var msgId = function(){
       return new Date().getTime();
     }
   };

@@ -3,15 +3,27 @@
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/pouchdb/dist/pouchdb.js"></script>
     <script src="/controller.js"></script>
+
+    <style>
+      table {
+        width: 50%
+      }
+      tr, td {
+        width: 100%;
+        border: 1px solid gray;
+      }
+    </style>
   </head>
   <body ng-controller="controller as vm">
     <h1>App 2</h1>
 
     <input type="text" ng-model="vm.msg">
-    <button ng-click="vm.push()">Push</button>
+    <button ng-enter="vm.push()" ng-click="vm.push()">Push</button>
 
-    <ul>
-      <li ng-repeat="obj in vm.list track by $index">{{obj.msg}}</li>
-    </ul>
+    <table>
+      <tr ng-repeat="obj in vm.list track by $index">
+        <td ng-style="vm.style(obj.remote)">{{obj.remote ? 'App 1 diz:' : 'Voce:'}} {{obj.msg}}</td>
+      </tr>
+    </table>
   </body>
 </html>
